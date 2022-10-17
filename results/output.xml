@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.12 on win32)" generated="20221017 17:56:03.998" rpa="false" schemaversion="3">
+<suite id="s1" name="Automacao" source="C:\Users\Arthur\Desktop\pratica\automacao.robot">
+<test id="s1-t1" name="Automatização e verificação de cadastro" line="11">
+<kw name="Abrir navegador" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221017 17:56:04.190" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20221017 17:56:04.190" endtime="20221017 17:56:05.307"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221017 17:56:05.307" level="INFO">Opening url 'https://qacademico.ifce.edu.br/qacademico/index.asp?t=1001'</msg>
+<status status="PASS" starttime="20221017 17:56:05.307" endtime="20221017 17:56:07.126"/>
+</kw>
+<status status="PASS" starttime="20221017 17:56:04.189" endtime="20221017 17:56:07.126"/>
+</kw>
+<kw name="Verificar se está na página Home" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${TITLE1}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221017 17:56:07.131" level="INFO">Page title is 'Q-Acadêmico Web para IFCE - Bem Vindo!'.</msg>
+<status status="PASS" starttime="20221017 17:56:07.127" endtime="20221017 17:56:07.131"/>
+</kw>
+<status status="PASS" starttime="20221017 17:56:07.127" endtime="20221017 17:56:07.131"/>
+</kw>
+<kw name="Preencher dados" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${MATRICULA}</arg>
+<arg>20221045050435</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221017 17:56:07.132" level="INFO">Typing text '20221045050435' into text field '//*[@id="txtLogin"]'.</msg>
+<status status="PASS" starttime="20221017 17:56:07.131" endtime="20221017 17:56:07.197"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SENHA}</arg>
+<arg>Cynthia3008</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221017 17:56:07.198" level="INFO">Typing text 'Cynthia3008' into text field '//*[@id="txtSenha"]'.</msg>
+<status status="PASS" starttime="20221017 17:56:07.197" endtime="20221017 17:56:07.255"/>
+</kw>
+<status status="PASS" starttime="20221017 17:56:07.131" endtime="20221017 17:56:07.255"/>
+</kw>
+<kw name="Clicar em Entrar" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221017 17:56:07.256" level="INFO">Clicking element '//*[@id="btnOk"]'.</msg>
+<status status="PASS" starttime="20221017 17:56:07.256" endtime="20221017 17:56:10.285"/>
+</kw>
+<status status="PASS" starttime="20221017 17:56:07.255" endtime="20221017 17:56:10.286"/>
+</kw>
+<kw name="Verificar se está na página inicial" library="resource">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${IMAGE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221017 17:56:10.295" level="INFO">Current page contains element '//*[@id="modalmensagens"]/div[1]/h2'.</msg>
+<status status="PASS" starttime="20221017 17:56:10.286" endtime="20221017 17:56:10.295"/>
+</kw>
+<status status="PASS" starttime="20221017 17:56:10.286" endtime="20221017 17:56:10.296"/>
+</kw>
+<status status="PASS" starttime="20221017 17:56:04.189" endtime="20221017 17:56:10.296"/>
+</test>
+<status status="PASS" starttime="20221017 17:56:03.999" endtime="20221017 17:56:10.297"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Automacao">Automacao</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
